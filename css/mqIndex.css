@@ -1,0 +1,71 @@
+@media (max-height: 550px) {
+    .container {
+        height: 600px;
+    }
+    :root {
+        --height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container__trailerJoin {
+        grid-template-areas: 
+        "poster poster"
+        "txt txt"
+        "trailer trailer";
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 30% 25% 30%;
+    }
+
+    .container__trailerJoinText {
+        justify-self: center;
+    }
+
+    .container__trailerJoinText {
+        grid-area: txt;
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-start;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .container__trailerJoinText
+    p:nth-child(1) {
+        font-weight: 700;
+        color: var(--blue);
+        font-size: clamp(8px, .6em + 2vw, 25px);
+    }
+    
+    .container__trailerJoinText
+    p:nth-child(2) {
+        font-weight: 500;
+        max-width: 500px;
+        color: var(--white);
+        font-size: clamp(3px, .3em + 2vw, 14px);
+    }
+
+    .container__trailerJoinVideo {
+        justify-self: center;
+        width: 80%;
+        height: 100%;
+        max-width: 300px;
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container__divJoinHomeBtnBuy {
+        flex-direction: column;
+    }
+
+    .container__divJoinHomeBtnBuy 
+    p:nth-child(1) {
+        width: 50%;
+        text-align: start;
+    }
+
+    .container__divJoinHomeBtnBuy 
+    p:nth-child(2) { 
+        width: auto;
+    }
+}

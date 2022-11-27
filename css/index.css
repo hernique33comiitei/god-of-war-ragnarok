@@ -1,0 +1,441 @@
+/* CONFIGS GERAIS */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+body {
+    background-color: var(--black);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 
+font-family: 'Open Sans', sans-serif;
+font-family: 'Source Serif Pro', serif; 
+*/
+
+:root {
+    --blue-stong: #2950C8;
+    --blue: #3563F0;
+    --white: #EFEFEF;
+    --black: #040404; 
+    --paddingDefault: 30px;
+    --height: 100vh;
+}
+
+/* CONFIGS PARA O CONTAINER */
+
+.container {
+    width: 100%;
+    background-color: var(--black);
+}
+
+/* CONFIGS PARA O CONTAINER HOME */
+
+.container__home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: var(--height);
+    width: 100%;
+    background-image: url("../midia/imgs/bg-one.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.container__homeBack {
+    position: absolute;
+    background: linear-gradient(90deg, #000000f2 0%, #00000000 100%);
+    width: 100%;
+    height: 100%;
+}
+
+.container__homeDivJoin {
+    position: relative;
+    padding: var(--paddingDefault);
+}
+
+/* CONFIGS PARA OS TEXT DO CONTAINER JOIN */
+
+.container__divJoinHomeText {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 600;
+    font-size: clamp(20px, 1em + 5vw, 130px);
+}
+
+/* CONFIGS PARA O BTN DE COMPRAR */
+
+.container__divJoinHomeBtnBuy {
+    transition: all .3s ease;
+    display: flex;
+    width: 80%;
+    max-width: 240px;
+    cursor: pointer;
+}
+
+.container__divJoinHomeBtnBuy:hover {
+    transform: scale(1.1);
+}
+
+.container__divJoinHomeBtnBuy p {
+    padding: 8px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(7px, 1em + 2vw, 17px);
+    font-weight: 700;
+}
+
+.container__divJoinHomeBtnBuy 
+p:nth-child(1) {
+    background-color: var(--blue-stong);
+    width: 30%;
+    color: #ffffff;
+}
+
+.container__divJoinHomeBtnBuy 
+p:nth-child(2) {
+    width: 70%;
+    background-color: #ffffff;
+    color: var(--black);
+}
+
+/* CONFIGS PARA A DIV DO TRAILER */
+
+.container__trailer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: var(--height);
+    width: 100%;
+    background-image: url("../midia/imgs/bg-two.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.container__trailerBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000f2 0%, #00000080 100%);
+}
+
+.container__trailerJoin {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 10px 0;
+    grid-template-areas: 
+    "poster poster"
+    "txt trailer";
+    grid-template-columns: 40% 30%;
+    grid-template-rows: 50% 30%;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* CONFIGS PARA O POSTER */
+
+.container__trailerJoinPoster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    grid-area: poster;
+    background-image: url("../midia/imgs/back-div-trailer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.container__trailerJoinPosterBack {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #000000 0%, #00000000 100%);
+}
+
+.container__trailerJoinPosterImage {
+    position: relative;
+    width: 30%;
+}
+
+/* CONFIGS PARA O TEXTO */
+
+.container__trailerJoinText {
+    grid-area: txt;
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container__trailerJoinText
+p:nth-child(1) {
+    font-weight: 700;
+    color: var(--blue);
+    font-size: clamp(10px, 1em + 2vw, 25px);
+}
+
+.container__trailerJoinText
+p:nth-child(2) {
+    font-weight: 500;
+    max-width: 500px;
+    color: var(--white);
+    font-size: clamp(5px, 1em + 2vw, 14px);
+}
+
+/* CONFIGS PARA O VIDEO */
+
+.container__trailerJoinVideo {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    grid-area: trailer;
+    display: flex;
+    justify-self: flex-end;
+}
+
+.container__trailerJoinVideo iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* CONFIGS PARA A DIV DOS PERSONAGENS */
+
+.container__personagens {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--height);
+    width: 100%;
+    background-image: url("../midia/imgs/bg-three.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.container__personagensBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000f2 0%, #00000080 100%);
+}
+
+.container__personagensDivScroll {
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    scrollbar-width: 0px;
+}
+
+.container__personagensDivScroll::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0;
+}
+
+.container__personagensDivScrollDiv {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    min-width: calc(300px * 3);
+}
+
+/* CONFIGS PARA OS COMPONENTS */
+
+.container__personagensDivScrollDivComponent {
+    transition: all .3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 300px;
+    height: 440px;
+    background-color: #000000;
+}
+
+.container__personagensDivScrollDivComponent p {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Serif Pro', serif;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: clamp(17px, 1em + 2vw, 25px);
+    color: var(--white);
+}
+
+.container__personagensDivScrollDivComponent:hover {
+    transform: scale(1.2);
+}
+
+.container__personagensDivScrollDivComponent
+p::after {
+    content: ' ';
+    width: 100%;
+    height: 5px;
+    background-color: var(--blue);
+}
+
+/* ADICIONAR FOTOS NOS COMPONENTES */
+
+.kratos {
+    background-image: url('../midia/imgs/kratos.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.atreus {
+    background-image: url('../midia/imgs/atreus.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.thor {
+    background-image: url('../midia/imgs/thor.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* CONFIGS PARA O FOOTER */
+
+.container__footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: var(--paddingDefault);
+    width: 100%;
+    height: 300px;
+    background-image: url("../midia/imgs/bg-footer.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; 
+}
+
+.container__footerBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #000000b5 0%, #000000 100%);
+    top: 0;
+    left: 0;
+}
+
+.container__footer img {
+    position: relative;
+    width: 80%;
+    max-width: 200px;
+}
+
+.container__footerLinks {
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+
+.container__footerLinks a {
+    transition: all .2s ease;
+    text-decoration: none;
+    color: var(--white);
+    font-size: clamp(9px, 2vw, 13px);
+}
+
+.container__footerLinks a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+.container__footer p {
+    position: relative;
+    color: var(--white);
+    font-size: clamp(9px, 2vw, 13px);
+}
+
+.container__footer span {
+    color: var(--blue);
+}
+
+/* CONTAINER VALORES */
+
+.container__valores {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.container__valoresDiv {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;  
+    height: 120px;
+    padding: 10px 0;
+    background-color: #0e0e0e;
+    width: 90%;
+    z-index: 2;
+}
+
+.container__valoresDiv p {
+    transition: all .3s ease;
+    cursor: pointer;
+    width: 30%;
+    max-width: 400px;
+    padding: 7px;
+    border-radius: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: clamp(10px, 2vw, 17px);
+    text-align: center;
+}
+
+.container__valoresDiv p:hover {
+    opacity: 70%;
+    transform: scale(.92);
+}
+
+.container__valoresDiv 
+p:nth-child(1) {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.container__valoresDiv 
+p:nth-child(2) {
+    background-color: var(--white);
+    color: var(--black);
+
+}
