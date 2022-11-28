@@ -39,6 +39,7 @@ font-family: 'Source Serif Pro', serif;
 /* CONFIGS PARA O CONTAINER HOME */
 
 .container__home {
+    visibility: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -49,6 +50,7 @@ font-family: 'Source Serif Pro', serif;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-attachment: fixed;
 }
 
 .container__homeBack {
@@ -110,6 +112,7 @@ p:nth-child(2) {
 /* CONFIGS PARA A DIV DO TRAILER */
 
 .container__trailer {
+    visibility: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -266,7 +269,7 @@ p:nth-child(2) {
 /* CONFIGS PARA OS COMPONENTS */
 
 .container__personagensDivScrollDivComponent {
-    transition: all .3s ease;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
     display: flex;
     align-items: flex-end;
@@ -287,7 +290,7 @@ p:nth-child(2) {
 }
 
 .container__personagensDivScrollDivComponent:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) !important;
 }
 
 .container__personagensDivScrollDivComponent
